@@ -339,9 +339,9 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
-from asimplest.data import AudioToImageDataset
+from data import AudioToImageDataset
 from torch.utils.data import random_split
-from asimplest.data import AudioToImageDataset
+
 
 
 '''def ConceptualCaptions(args, smalldata=False, testset=False):
@@ -397,7 +397,7 @@ def load_audio_to_image_dataset(data_path, transform, split_ratio=0.8, testset=F
     :return: test_dataset if testset else (train_dataset, valid_dataset)
     """
     
-    dataset = AudioToImageDataset(features_path=f"{data_path}/features.json", 
+    dataset = AudioToImageDataset(features_path=f"{data_path}/features_all.json", 
                                   images_dir=f"{data_path}/images", 
                                   transform=transform)
 
